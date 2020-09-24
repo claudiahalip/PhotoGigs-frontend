@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// import {Provider} from 'react-redux';
+// import { createStore, applyMiddleare} from 'redux';
+// import {composeWithDevTools} from 'redux-devtools-extension';
+// import trunk from 'redux-trunk';
+// import photographerReducer from './reducers/photographerReducer'
+
+//const store = createStore(photographerReducer, composeWithDevTools(applyMiddleare(trunk)));
 
 ReactDOM.render(
   <React.StrictMode>
+   
     <App />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
