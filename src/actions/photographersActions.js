@@ -1,18 +1,21 @@
-const gotPhotographers = (photographers) => {
+export const gotPhotographers = (photographers) => {
     return { type: "GOT_PHOTOGRAPHERS", payload: photographers}
 };
 
-const addPhotographer = (photographer) => {
+export const addPhotographer = (photographer) => {
     return {type: "ADD_PHOTOGRAPHER", payload: photographer}
 }
 
-export const fetchPhotographer = ()=>{
-    dispatchEvent({type: "FETCHING_PHOTOGRAPHERS"})
+export const fetchPhotographers = ()=>{
+    return (dispatch) => {
+        dispatch({type: "FETCHING_PHOTOGRAPHERS"})
     fetch("http://localhost:3001/photographers")
     .then(resp => resp.json())
     .then((resp)=>{
-        dispatchEvent(gotPhotographers(resp))
+        //debugger
+        dispatch(gotPhotographers(resp))
     });
+  }
 }
 
 export const createPhotographer = (photographer) => {
@@ -25,9 +28,11 @@ export const createPhotographer = (photographer) => {
             }, 
             body: JSON.stringify(photographer)
             };
-            fetch("http://localhost:3001/photographers")
+            fetch("http://localhost:3001/photographers", configObj)
             .then(resp => resp.json())
-            .then((newPhotographer) => dispatch(addPhotographer(newPhotographer)))
+            .then((newPhotographer) => {
+                //debugger
+                dispatch(addPhotographer(newPhotographer))})
 
         
     }
