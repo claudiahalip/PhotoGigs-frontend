@@ -3,24 +3,39 @@ import {Component} from 'react'
 import Reviews from '../components/Reviews'
 import ReviewForm from '../components/ReviewForm'
 import {connect} from 'react-redux'
-import {createReview} from '../actions/reviewsActions'
+import {createReview, fetchingReviews} from '../actions/reviewsActions'
+import {
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 class ReviewsContainer extends Component {
-    filteredReviews = ()=>{
-        return this.props.reviews.filter(review => review.photographerId===this.props.photographer.id)
+
+    componentDidMount(){
+        this.props.fetchingReviews();
     }
-    render(){
+
+    filterReviews =()=>{
+       return this.props.reviews.filter(review => review.photographer_id === this.props.photographer.id)
+    }
+   
+     render(){
         return(
             <div>
-                <h1>ReviewContainer test</h1>
-                <Reviews reviews = {this.filteredReviews}/>
-                <ReviewForm createReview = {this.props.createReview} photographerId = {this.props.photographer.id}/>
+                
+               <Route exact path = "/reviews">
+               <Reviews reviews = {this.filterReviews()}/>
+               <ReviewForm createReview = {this.props.createReview} photographerId = {this.props.photographer.id}/>
+               </Route>
+               
             </div>
         )
     }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = (state)=>{
+    //console.log(state)
     return state
 }
 
-export default connect(mapStateToProps, {createReview})(ReviewsContainer)
+export default connect(mapStateToProps, {createReview, fetchingReviews})(ReviewsContainer)

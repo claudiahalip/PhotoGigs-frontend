@@ -1,5 +1,6 @@
 import React from 'react'
 import {Component} from 'react';
+import { withRouter } from 'react-router-dom'; 
 
 class PhotographerForm extends Component {
     state = {
@@ -13,11 +14,12 @@ class PhotographerForm extends Component {
     }
 
     handleOnSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
         this.props.createPhotographer(this.state)
         this.setState({
             name:'', website:'', years_of_experience:'', city:'', state: ''
         })
+        this.props.history.push('/')
     }
 
     render(){
@@ -56,4 +58,4 @@ class PhotographerForm extends Component {
     }
 }
 
-export default PhotographerForm 
+export default withRouter(PhotographerForm); 

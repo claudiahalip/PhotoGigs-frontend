@@ -14,13 +14,13 @@ class ReviewForm extends Component{
     handleOnSubmit = (e) =>{
         e.preventDefault()
         this.props.createReview({content: this.state.content, photographer_id: this.props.photographerId})
+        this.setState({content: ''})
     }
 
     render(){
       return(
         <div>
-          <h1>ReviewForm test</h1>
-          <form>
+          <form onSubmit={this.handleOnSubmit}>
             <label>Add a review:</label>
             <input type="text" value={this.state.content} onChange={this.handleOnChange}/>
             <input type="submit"/>

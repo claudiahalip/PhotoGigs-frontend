@@ -22,20 +22,21 @@ class PhotographersContainer extends Component {
       return (
         <div>
           <Switch>
-            <Route exact path="/">
-              <Photographers photographers= {this.props.photographers} />
-            </Route>
-            <Route exact path = "/photographers/new" >
+          <Route exact path ="/photographers/new">
               <PhotographerForm createPhotographer = {this.props.createPhotographer}/>
             </Route>
-            </Switch>
+            <Route  path="/">
+              <Photographers photographers= {this.props.photographers} />
+            </Route>
+           
+          </Switch> 
         </div>
       )
     }
 }
 const mapStateToProps = (state) => {
     //debugger
-    console.log(state)
+    //console.log(state)
     return state
 }
 

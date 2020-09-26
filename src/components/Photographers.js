@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import Photographer from './Photographer';
-import PhotographerProfile from './PhotographerProfile'
+
 
 class Photographers extends Component {
 
