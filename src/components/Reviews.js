@@ -4,7 +4,7 @@ import Review from './Review'
 class Reviews extends Component{
 
   renderReviews = ()=>{
-    console.log(this.props.reviews)
+    
     return this.props.reviews.map(review => {
         return <Review review ={review} key = {review.id}/>
     })

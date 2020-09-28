@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 class PhotographerForm extends Component {
     state = {
-        name:'', website:'', years_of_experience:'', city:'', state: ''
+        name:'', website:'', years_of_experience:'', city:'', state: '', image: ''
     }
 
     handleOnChange = (event)=>{
@@ -17,9 +17,9 @@ class PhotographerForm extends Component {
         event.preventDefault();
         this.props.createPhotographer(this.state)
         this.setState({
-            name:'', website:'', years_of_experience:'', city:'', state: ''
+            name:'', website:'', years_of_experience:'', city:'', state: '', image: ''
         })
-        this.props.history.push('/')
+        this.props.history.push('/photographers')
     }
 
     render(){
@@ -45,6 +45,10 @@ class PhotographerForm extends Component {
                     <br></br>
                     <label>State </label>
                     <input type="text" onChange = {this.handleOnChange} value={this.state.state} name="state"/>
+                    <br></br>
+                    <br></br>
+                    <label>Your photo  </label>
+                    <input type="text" onChange = {this.handleOnChange} value={this.state.image} name="image"/>
                     <br></br>
                     <br></br>
                     

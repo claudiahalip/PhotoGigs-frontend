@@ -44,21 +44,23 @@ body {
 
 
 
-/* .photographer-avatar {
+.photographer-avatar {
+  vertical-align: middle;
+  border-radius: 50%;
   justify-self: center;
-  height: 12rem;
+  height: 8rem;
   width: auto;
-} */
+}
 
 button {
   position: relative;
   background-color: #ec9128;
   border: none;
   border-radius: 5px;
-  height: 2rem;
+  height: 1.5rem;
   width: max-content;
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 14px;
   justify-self: center;
 }
 
@@ -169,6 +171,7 @@ button:hover {
 
 .flip-card {
   background-color: transparent;
+  
   width: 15rem;
   height: 15rem;
   border: grey solid 1px;
@@ -202,12 +205,39 @@ button:hover {
 }
 
 .flip-card-front {
-  background-color: rgba(187, 187, 187, 0.377);
+  background-color:  #ec9128;
   color: black;
 }
 
 .flip-card-back {
-  background-color: #ec9128;
+  background-color:rgba(51, 51, 51, 0.432);
   color: white;
   transform: rotateY(180deg);
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+h1 {
+  font-size: 48px;
+  color: rgba(63, 62, 62, 0.658);
+  text-shadow: 2px 2px 7px ;
+}
+.home-container{
+  display: center;
+  position: relative;
+  text-align: center;
+  width: auto;
+  height: 20rem;
+  margin: 1rem 2rem;
+  padding: 3rem;
+  text-align: center;
+  color: rgba(63, 62, 62, 0.658);
+  background-color: #ec902891;
+  
 }

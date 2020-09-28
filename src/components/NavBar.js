@@ -1,8 +1,5 @@
 import React from 'react'
 import {
-    Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
 
@@ -18,7 +15,11 @@ function NavBar (props){
             </Link>
             
             <Link to="/photographers" >
-                <p className="navBarLinks">See all photographers</p>
+                <p className="navBarLinks">All photographers</p>
+            </Link>
+
+            <Link to="/reviews" >
+                <p className="navBarLinks">All reviews</p>
             </Link>
             
             </div>

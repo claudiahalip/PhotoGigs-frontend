@@ -7,11 +7,14 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+      
+      <br/>
+      <h1 className="title" >PHOTOGIGS</h1>
+      <br/>
       <Home/>
-      <br/>
-      <h1>PHOTOGIGS</h1>
-      <br/>
       <PhotographersContainer/>
+      <h4>2020</h4>
+      <br/>
     </div>
   );
 }
