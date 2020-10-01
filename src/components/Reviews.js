@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Review from './Review'
-
+import {Route} from "react-router-dom";
 class Reviews extends Component{
 
   renderReviews = ()=>{
@@ -13,7 +13,9 @@ class Reviews extends Component{
     render(){
       return(
         <div>
-          {this.renderReviews()}
+          <Route exact path = "/reviews">
+            {this.renderReviews()}
+          </Route>
         </div>
         )
     }

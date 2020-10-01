@@ -1,22 +1,25 @@
 import React from 'react'
 import {Component} from 'react'
 import Reviews from '../components/Reviews'
-import {Route} from "react-router-dom";
-
+import {connect} from 'react-redux'
+import {fetchingReviews} from '../actions/photographersActions'
 
 class ReviewsContainer extends Component {
+    componentDidMount(){
+       this.props.fetchingReviews();
+    }
    
      render(){
         return(
             <div>
-              <Route exact path = "/reviews">
-                <Reviews reviews = {this.props.reviews}/>
+              <Reviews reviews = {this.props.reviews}/>
               <br/><br/>
-              </Route>
             </div>
         )
     }
 }
+const mapStateToProps = (state) => {
+    return state
+}
 
-
-export default ReviewsContainer
+export default connect(mapStateToProps, {fetchingReviews})(ReviewsContainer)

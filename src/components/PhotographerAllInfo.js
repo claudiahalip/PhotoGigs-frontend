@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 
+
 class PhotographerAllInfo extends Component{
     state ={
         content:''
@@ -19,7 +20,6 @@ class PhotographerAllInfo extends Component{
     }
 
     handleOnSubmit = (e) =>{
-        //debugger
         e.preventDefault()
         this.props.createReview({content: this.state.content, photographer_id: this.props.id})
         this.setState({content: ''})
@@ -27,7 +27,6 @@ class PhotographerAllInfo extends Component{
     
 
     renderPhotographer(){
-        //debugger
         const photographer = this.props.photographers.find(photographer => photographer.id == this.props.id)
         if (photographer){
             return <div>
@@ -44,13 +43,12 @@ class PhotographerAllInfo extends Component{
 
     renderReviews(){
         //debugger
-
         const photographer = this.props.photographers.find(photographer => photographer.id == this.props.id)
         if(photographer){
             const reviews = this.props.reviews.filter(review => review.photographer_id == photographer.id)
             return <div>{reviews.map(review => {
                 return <div>
-                       <li key={review.id}>{review.content} posted at: {this.transformDate(review.created_at)}</li>
+                       <li key= {review.id} >{review.content} posted at: {this.transformDate(review.created_at)}</li>
                        <br/>
                        <br/>
                       </div>})

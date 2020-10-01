@@ -8,18 +8,14 @@ import {
 
 class Photographers extends Component {
 
-  componentDidMount(){
-    this.props.fetchingReviews();
-}
+  renderPhotographers = ()=>{
+    return this.props.photographers
+     .map(photographer => {
+      return <Photographer photographer={photographer} key={photographer.id} />
+      })
+  }
 
-    renderPhotographers=()=>{
-      return this.props.photographers.map(photographer => {
-        return <Photographer photographer={photographer} key={photographer.id}/>
-        })
-    }
-
-    render(){
-      //debugger
+  render(){
       return (
         <div >
           {this.renderPhotographers()}
@@ -27,9 +23,13 @@ class Photographers extends Component {
               return <PhotographerAllInfo id = {match.params.id} photographers={this.props.photographers} reviews={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews}/>
             }}>
           </Route>
+          <br></br>
+          <br></br>
         </div>
       )
     }
+
+
 }
 
 export default Photographers;

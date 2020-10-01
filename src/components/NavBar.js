@@ -21,7 +21,7 @@ function NavBar (props){
             <Link to="/reviews" >
                 <p className="navBarLinks">All reviews</p>
             </Link>
-            
+           
             </div>
         </div>
     )

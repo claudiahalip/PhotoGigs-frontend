@@ -60,7 +60,6 @@ export const fetchingReviews = () =>{
 export const createReview = (review) =>{
     
     return dispatch => {
-        console.log(review)
         const configObj ={
             method: "POST",
             headers:{
@@ -76,3 +75,4 @@ export const createReview = (review) =>{
         })
     }
 }
+

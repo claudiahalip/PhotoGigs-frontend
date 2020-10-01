@@ -5,14 +5,16 @@ import {
     Link
   } from "react-router-dom";
 
+  
+
 class Photographer extends Component {
 
-    render(){
+render(){
       return (
         <div className='card-grid'>
           <Route exact path = "/photographers">
           <div className="flip-card">
-          <div className="flip-card-inner">
+            <div className="flip-card-inner">
               <div className = "flip-card-front">
                 <h2>{this.props.photographer.name}</h2>
                 <img src={this.props.photographer.image} className="photographer-avatar"></img>
@@ -24,13 +26,13 @@ class Photographer extends Component {
                 <h3>YOE: {this.props.photographer.years_of_experience} </h3>
                 <h3>{this.props.photographer.city}, {this.props.photographer.state}</h3>
                 <Link to = {`/photographers/${this.props.photographer.id}`}>
-                <button id = {this.props.photographer.id} >View Reviews</button>
+                <button id = {this.props.photographer.id} >View profile</button>
                 </Link>
-             </div>
-            
-       
-        </div>
-        </div>
+                <br></br>
+                <br></br>
+              </div>
+            </div>
+          </div>
         </Route>
        </div>
       )

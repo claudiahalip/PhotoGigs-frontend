@@ -7,14 +7,13 @@ import {fetchPhotographers, createPhotographer, createReview, fetchingReviews} f
 import {
     Switch,
     Route,
-    Link
    } from "react-router-dom";
-import ReviewsContainer from './ReviewsContainer'
+
+
 class PhotographersContainer extends Component {
      
     componentDidMount(){
         this.props.fetchPhotographers();
-        this.props.fetchingReviews();
     }
 
     render() {
@@ -29,7 +28,6 @@ class PhotographersContainer extends Component {
               <Photographers photographers= {this.props.photographers} reviews ={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews} />
             </Route >
           </Switch> 
-          <ReviewsContainer reviews = {this.props.reviews}/>
         </div>
       )
     }
