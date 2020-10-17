@@ -5,7 +5,7 @@ import {
 
 
 
-function Home(props){
+function Home(){
   return(
     <div>
     <Route exact path = "/">

@@ -7,12 +7,14 @@ export const addPhotographer = (photographer) => {
 }
 
 export const fetchPhotographers = ()=>{
+    console.log("c")//second
     return (dispatch) => {
         dispatch({type: "FETCHING_PHOTOGRAPHERS"})
     fetch("http://localhost:3001/photographers")
     .then(resp => resp.json())
     .then((resp)=>{
         //debugger
+        console.log("d")//last
         dispatch(gotPhotographers(resp))
     });
   }

@@ -4,10 +4,12 @@ import {
      Route,
     Link
   } from "react-router-dom";
+import LikeButton from './LikeButton'
+import LikeButtonReactIcons from './LikeButtonReactIcons'
 
-  
 
 class Photographer extends Component {
+
 
 render(){
       return (
@@ -30,9 +32,12 @@ render(){
                 </Link>
                 <br></br>
                 <br></br>
+                {/* <LikeButton/> */}
+                <LikeButtonReactIcons/>
               </div>
             </div>
           </div>
+          
         </Route>
        </div>
       )

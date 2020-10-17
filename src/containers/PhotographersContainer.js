@@ -13,7 +13,9 @@ import {
 class PhotographersContainer extends Component {
      
     componentDidMount(){
+      console.log("a")//first
         this.props.fetchPhotographers();
+      console.log("b") //third
     }
 
     render() {

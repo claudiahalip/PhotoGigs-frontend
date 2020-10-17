@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import {fetchingReviews} from '../actions/photographersActions'
 
 class ReviewsContainer extends Component {
+    
     componentDidMount(){
        this.props.fetchingReviews();
     }
@@ -19,7 +20,7 @@ class ReviewsContainer extends Component {
     }
 }
 const mapStateToProps = (state) => {
-    return state
+    return {reviews: state.reviews}
 }
 
 export default connect(mapStateToProps, {fetchingReviews})(ReviewsContainer)

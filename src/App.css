@@ -241,3 +241,8 @@ h1 {
   background-color: #ec902891;
   
 }
+
+
+input[type ="radio"] {
+  display: none;
+}
