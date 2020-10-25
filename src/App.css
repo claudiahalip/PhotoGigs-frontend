@@ -178,7 +178,7 @@ button:hover {
   padding: 1rem;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #ec9128;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px; 
 }
 
 
@@ -246,3 +246,20 @@ h1 {
 input[type ="radio"] {
   display: none;
 }
+
+.react-calendar {
+ 
+  
+}
+
+/* .react-calendar__viewContainer{
+  background: #ec902891;
+} */
+
+/* .react-calendar__month-view__weekdays {
+  color: gray;
+}
+
+.react-calendar__navigation button {
+  font-size: 1em;
+} */

@@ -1,12 +1,13 @@
 import React from 'react';
 import {Component} from 'react';
+import Calendar from 'react-calendar';
 import {
      Route,
     Link
   } from "react-router-dom";
 import LikeButton from './LikeButton'
 import LikeButtonReactIcons from './LikeButtonReactIcons'
-
+import PhotographerAvalableDates from  './PhotographerAvalableDates'
 
 class Photographer extends Component {
 
@@ -34,6 +35,7 @@ render(){
                 <br></br>
                 {/* <LikeButton/> */}
                 <LikeButtonReactIcons/>
+                
               </div>
             </div>
           </div>

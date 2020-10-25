@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
-
+import PhotographerAvalableDates from './PhotographerAvalableDates'
+import {Link} from 'react-router-dom'
 
 class PhotographerAllInfo extends Component{
     state ={
@@ -56,10 +57,16 @@ class PhotographerAllInfo extends Component{
         }
     }
 
+    
+
     render(){
         return(
           <div>
             {this.renderPhotographer()}
+            <h3>See avalable dates</h3>
+            <PhotographerAvalableDates/>
+       
+            <h3>Reviews:</h3>
             {this.renderReviews()}
             <hr/>
             <br/>
