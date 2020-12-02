@@ -21,6 +21,14 @@ function NavBar (){
             <Link to="/reviews" >
                 <p className="navBarLinks">All reviews</p>
             </Link>
+
+            <Link to="/login" >
+                <p className="navBarLinks">Login</p>
+            </Link>
+
+            <Link to="/signup" >
+                <p className="navBarLinks">Sign up</p>
+            </Link>
            
             </div>
         </div>
