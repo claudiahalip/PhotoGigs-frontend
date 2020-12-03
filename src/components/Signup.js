@@ -31,32 +31,40 @@ class Signup extends Component {
                     placeholder="username"
                     type="text"
                     name="username"
-                    value={username}
+                    value={this.state.username}
                     onChange={this.handleChange}>
                     </input>
+                    <br></br>
+                    <br></br>
 
                     <input
-                    plaseholder="email"
+                    placeholder="email"
                     type="text"
                     name="email"
-                    value={email}
+                    value={this.state.email}
                     onChange={this.handleChange}
                     ></input>
+                    <br></br>
+                    <br></br>
                     <input
                     placeholder="password"
                     type="password"
                     name="password"
-                    value={password}
+                    value={this.state.password}
                     onChange={this.handleChange}
                     ></input>
+                    <br></br>
+                    <br></br>
 
                     <input
                     placeholder="password confirmation"
                     type="password"
                     name="password_confirmation"
-                    value="password_confirmation"
+                    value={this.state.password_confirmation}
                     onChange={this.handleChange}
                     ></input>
+                    <br></br>
+                    <br></br>
                     <button
                     placeholder="submit"
                     type="submit"

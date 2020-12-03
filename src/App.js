@@ -16,7 +16,7 @@ function App() {
       <PhotographersContainer/>
       <ReviewsContainer/>
       <UsersContainer/>
-      <h4>2020</h4>
+      <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
       <br/>
     </div>
   );

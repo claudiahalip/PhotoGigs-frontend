@@ -31,24 +31,29 @@ class Login extends Component {
                     placeholder= "username"
                     type="text"
                     name="username"
-                    value={username}
+                    value={this.state.username}
                     onChange={this.handleChange}></input>
-
+                    <br></br>
+                    <br></br>
                     <input
                     placeholder="email"
                     type="text"
                     name="email"
-                    value={email}
+                    value={this.state.email}
                     onChange={this.handleChange}
                     ></input>
+                    <br></br>
+                    <br></br>
 
                     <input
                     placeholder="password"
                     type="password"
                     name="password"
-                    value={password}
+                    value={this.state.password}
                     onChange={this.handleChange}
                     ></input>
+                    <br></br>
+                    <br></br>
 
                     <button
                     placeholder="submit"
