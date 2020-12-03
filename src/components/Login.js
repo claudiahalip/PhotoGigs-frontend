@@ -10,13 +10,23 @@ class Login extends Component {
         errors: ""
     }
 
+    handleChange = (event)=>{
+        this.setState({
+          [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = (event)=>{
+        event.preventDefault()
+    }
+
 
 
     render(){
         return(
             <div>
                 <h2>Login</h2>
-                <form onSubmit={this.handlesubmit}>
+                <form onSubmit={this.handleSubmit}>
                     <input
                     placeholder= "username"
                     type="text"

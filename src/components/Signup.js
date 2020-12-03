@@ -12,6 +12,16 @@ class Signup extends Component {
         errors:""
     }
 
+    handleChange = (event)=>{
+        this.setState({
+          [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = (event)=>{
+        event.preventDefault()
+    }
+
     render() {
         return(
             <div>
