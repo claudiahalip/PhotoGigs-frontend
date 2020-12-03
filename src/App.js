@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import PhotographersContainer from  './containers/PhotographersContainer'
 import ReviewsContainer from  './containers/ReviewsContainer'
+import UsersContainer from './containers/UsersContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Home/>
       <PhotographersContainer/>
       <ReviewsContainer/>
+      <UsersContainer/>
       <h4>2020</h4>
       <br/>
     </div>
