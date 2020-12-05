@@ -10,10 +10,3 @@ export default function userReducer(
 
         }
     }
-
-state = { photographers: [],reviews: [], loading: false}, action){
-    switch(action.type) {
-        case "GOT_PHOTOGRAPHERS":
-            return{...state, loading: false, photographers: action.payload}
-        case "FETCHING_PHOTOGRAPHERS":
-            return {...state, loading: true}
