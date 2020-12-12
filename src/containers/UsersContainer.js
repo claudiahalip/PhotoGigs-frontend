@@ -9,8 +9,14 @@ class UsersContainer extends Component {
     render(){
         return(
             <div>
-                <Login/>
-                <Signup/>
+                
+                    <Route exact path="/login">
+                       <Login/>
+                    </Route>
+                    <Route exact path="/signup">
+                        <Signup/>
+                    </Route>
+                
             </div>
         )
     }

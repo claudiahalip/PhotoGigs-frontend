@@ -1,5 +1,5 @@
 export default function photographerReducer(
-    state = { photographers: [],reviews: [], loading: false}, action){
+    state = { photographers: [],reviews: [], users: [], loading: false}, action){
         switch(action.type) {
             case "GOT_PHOTOGRAPHERS":
                 return{...state, loading: false, photographers: action.payload}

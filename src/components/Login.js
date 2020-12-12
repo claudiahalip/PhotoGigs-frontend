@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Link} from "react-router-dom";
 import axios from 'axios'
+import App from '../App'
 
 class Login extends Component {
     state = {
@@ -18,14 +18,37 @@ class Login extends Component {
 
     handleSubmit = (event)=>{
         event.preventDefault()
-    }
+        const {username, email, password} = this.state
+        let user = {
+            username: username,
+            email: email,
+            password: password
+          }
+          
+      axios.post('http://localhost:3002/login', {user}, {withCredentials: true})
+          .then(response => {
+            if (response.data.logged_in) {
+              this.props.handleLogin(response.data)
+              this.redirect()
+            } else {
+              this.setState({
+                errors: response.data.errors
+              })
+            }
+          })
+          .catch(error => console.log('api errors:', error))
+        };
+      redirect = () => {
+          this.props.history.push('/photographers')
+        }
+    
 
 
 
     render(){
         return(
             <div>
-                <h2>Login</h2>
+                <h2>Login here:</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input
                     placeholder= "username"
@@ -59,9 +82,7 @@ class Login extends Component {
                     placeholder="submit"
                     type="submit"
                     >Log in</button>
-                    <div>
-                        or <Link to='/signup'>Sign up</Link>
-                    </div>
+                    
                 </form>
             </div>
         )

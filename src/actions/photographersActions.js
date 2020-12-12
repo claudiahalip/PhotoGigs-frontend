@@ -97,7 +97,7 @@ export const createUser = (user) => {
             "Content-Type": "application/json",
             Accept: "application/json",
             },
-            body: JSON.stringify(review)};
+            body: JSON.stringify(user)};
 
         fetch("http://localhost:3001/users", configObj)
         .then(resp => resp.json())
@@ -114,7 +114,7 @@ export const fetchingUser = (user) => {
         fetch("http://localhost:3001/user")
         .then(resp => resp.json())
         .then(resp => {
-          dispatch(gotUser(resp))
+          dispatch(gotUsers(resp))
       })
     }
 
