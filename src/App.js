@@ -5,8 +5,11 @@ import ReviewsContainer from  './containers/ReviewsContainer'
 import UsersContainer from './containers/UsersContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
-function App() {
-  
+import { Component } from 'react';
+
+
+ class App extends Component {
+  render(){
   return (
     <div className="App">
       <NavBar/>
@@ -20,7 +23,7 @@ function App() {
       <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
       <br/>
     </div>
-  );
+  )};
 }
 
 export default App;

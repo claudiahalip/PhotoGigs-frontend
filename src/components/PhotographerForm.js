@@ -7,6 +7,8 @@ class PhotographerForm extends Component {
         name:'', website:'', years_of_experience:'', city:'', state: '', image: ''
     }
 
+    
+
     handleOnChange = (event)=>{
       this.setState({
         [event.target.name]: event.target.value
