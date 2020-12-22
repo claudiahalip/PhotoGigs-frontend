@@ -12,9 +12,9 @@ import { BrowserRouter as Router,} from "react-router-dom";
 import userReducer from './reducers/userReducer';
 
 
-const reducer = combineReducers({
-  photographerReducer, userReducer
-})
+// const reducer = combineReducers({
+//   photographerReducer, userReducer
+// })
 const store = createStore(photographerReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 //const store = createStore(reducer, applyMiddleware(thunk))
