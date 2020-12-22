@@ -38,7 +38,7 @@ import Axios from 'axios';
   }
 
   loginStatus = () => {
-    Axios.get("http://localhost:3002/users", {withCredentials: true}
+    Axios.get("http://localhost:3002/users", {withCredentials: true})
     .then(response=> {
       if(response.isLoggedIn){
          this.handleLogin(response)
@@ -47,7 +47,6 @@ import Axios from 'axios';
       }
     }).catch(
        error => console.log ('api error:', error)
-    )
     )}
 
   render(){
