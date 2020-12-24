@@ -9,6 +9,9 @@ class Login extends Component {
         password: "",
         errors: ""
     }
+    componentWillMount(){
+      return this.props.loggedInStatus ? this.redirect() : null
+  }
 
     handleChange = (event)=>{
         this.setState({
@@ -25,7 +28,7 @@ class Login extends Component {
             password: password
           }
           
-      axios.post('http://localhost:3002/login', {user}, {withCredentials: true})
+      axios.post('http://localhost:3001/login', {user}, {withCredentials: true})
           .then(response => {
             if (response.data.logged_in) {
               this.props.handleLogin(response.data)

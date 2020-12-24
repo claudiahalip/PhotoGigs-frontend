@@ -9,7 +9,8 @@ import { Component } from 'react';
 import Axios from 'axios';
 import Signup from './components/Signup';
 import Login from'./components/Login';
-import { Switch } from 'react-router';
+import Logout from './components/Logout';
+
 
  class App extends Component {
    
@@ -42,7 +43,7 @@ import { Switch } from 'react-router';
   }
 
   loginStatus = () => {
-    Axios.get("http://localhost:3002/users", {withCredentials: true})
+    Axios.get("http://localhost:3001/users", {withCredentials: true})
     .then(response=> {
       if(response.isLoggedIn){
          this.handleLogin(response)
@@ -66,8 +67,9 @@ import { Switch } from 'react-router';
         <ReviewsContainer/>
         <UsersContainer/>
         
-        <Login handleLogin = {this.handleLogin}/>
-        <Signup handleLogin = {this.handleLogin} />
+        <Login handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn}/>
+        <Signup handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn}/>
+        <Logout handleLogout = {this.handleLogout} loggedInStatus = {this.state.isLoggedIn}/>
         <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
         <br/>
         

@@ -10,7 +10,7 @@ export const fetchPhotographers = ()=>{
     console.log("c")//second
     return (dispatch) => {
         dispatch({type: "FETCHING_PHOTOGRAPHERS"})
-    fetch("http://localhost:3001/photographers")
+    fetch("http://localhost:3002/photographers")
     .then(resp => resp.json())
     .then((resp)=>{
         //debugger
@@ -30,7 +30,7 @@ export const createPhotographer = (photographer) => {
             }, 
             body: JSON.stringify(photographer)
             };
-            fetch("http://localhost:3001/photographers", configObj)
+            fetch("http://localhost:3002/photographers", configObj)
             .then(resp => resp.json())
             .then((newPhotographer) => {
                 //debugger
@@ -51,7 +51,7 @@ export const  addReview =(review)=>{
 export const fetchingReviews = () =>{
     return dispatch => {
       dispatch({type: 'FETCHING_REVIEWS'})
-      fetch("http://localhost:3001/reviews")
+      fetch("http://localhost:3002/reviews")
       .then(resp => resp.json())
       .then(resp => {
         dispatch(gotReviews(resp))
@@ -70,7 +70,7 @@ export const createReview = (review) =>{
             },
             body: JSON.stringify(review)};
 
-        fetch("http://localhost:3001/reviews", configObj)
+        fetch("http://localhost:3002/reviews", configObj)
         .then(resp => resp.json())
         .then(newReview =>{
             dispatch(addReview(newReview))
@@ -99,7 +99,7 @@ export const createUser = (user) => {
             },
             body: JSON.stringify(user)};
 
-        fetch("http://localhost:3001/users", configObj)
+        fetch("http://localhost:3002/users", configObj)
         .then(resp => resp.json())
         .then(newUser =>{
             dispatch(addUser(newUser))
@@ -111,7 +111,7 @@ export const createUser = (user) => {
 export const fetchingUser = (user) => {
     return dispatch => {
         dispatch({type: 'FETCHING_USER'})
-        fetch("http://localhost:3001/user")
+        fetch("http://localhost:3002/user")
         .then(resp => resp.json())
         .then(resp => {
           dispatch(gotUsers(resp))
