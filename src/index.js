@@ -6,10 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import thunk from "redux-thunk";
 import photographerReducer from './reducers/photographerReducer'
 import { BrowserRouter as Router,} from "react-router-dom";
-import userReducer from './reducers/userReducer';
+import thunk from 'redux-thunk'
 
 
 // const reducer = combineReducers({
