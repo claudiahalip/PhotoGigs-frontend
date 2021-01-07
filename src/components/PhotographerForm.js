@@ -27,7 +27,7 @@ class PhotographerForm extends Component {
     render(){
         return(
             <div>
-                <h2>Add your profile:</h2>
+                <h2>Add your listing:</h2>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>Name </label>
                     <input type="text" onChange = {this.handleOnChange} value={this.state.name} name="name"/>

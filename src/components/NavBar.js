@@ -11,7 +11,7 @@ function NavBar (){
                 <p className="navBarLinks">Home</p>
             </Link>
             <Link to="/photographers/new">
-                <p className="navBarLinks">Add your profile</p>
+                <p className="navBarLinks">Add your listing</p>
             </Link>
             
             <Link to="/photographers" >

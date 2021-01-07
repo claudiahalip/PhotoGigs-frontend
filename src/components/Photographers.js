@@ -14,7 +14,7 @@ class Photographers extends Component {
   }
 
   handleChange =(event)=>{
-    const filteredPhotographers = this.props.photographers.filter(photographer => photographer.name.includes(event.target.value))
+    const filteredPhotographers = this.props.photographers.filter(photographer => photographer.name.toLowerCase().includes(event.target.value.toLowerCase()))
     this.setState({
       searchTerm: event.target.value,
       currentDisplay : filteredPhotographers

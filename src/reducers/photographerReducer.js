@@ -28,6 +28,6 @@ export default function photographerReducer(
         }
 
 
-        //user actions
+        
 
 }

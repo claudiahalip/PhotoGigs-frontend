@@ -63,9 +63,9 @@ import Logout from './components/Logout';
         <h1 className="title" >PHOTOGIGS</h1>
         <br/>
         <Home/>
-        <PhotographersContainer/>
-        <ReviewsContainer/>
-        <UsersContainer/>
+        <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        <UsersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         
         <Login handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn}/>
         <Signup handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn}/>
