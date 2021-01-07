@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Route} from 'react-router-dom'
 
 
 class Login extends Component {
@@ -51,6 +52,7 @@ class Login extends Component {
     render(){
         return(
             <div>
+              <Route exact path = '/login'>
                 <h2>Login here:</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input
@@ -87,6 +89,7 @@ class Login extends Component {
                     >Log in</button>
                     
                 </form>
+                </Route>
             </div>
         )
     }

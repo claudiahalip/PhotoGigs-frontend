@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import PhotographersContainer from  './containers/PhotographersContainer'
 import ReviewsContainer from  './containers/ReviewsContainer'
-import UsersContainer from './containers/UsersContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import { Component } from 'react';
@@ -65,11 +64,11 @@ import Logout from './components/Logout';
         <Home/>
         <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        <UsersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         
-        <Login handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn}/>
-        <Signup handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn}/>
-        <Logout handleLogout = {this.handleLogout} loggedInStatus = {this.state.isLoggedIn}/>
+        
+        <Login handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        <Signup handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        <Logout handleLogout = {this.handleLogout} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
         <br/>
         
