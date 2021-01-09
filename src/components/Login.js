@@ -4,12 +4,17 @@ import {Route} from 'react-router-dom'
 
 
 class Login extends Component {
-    state = {
+
+  constructor (props) {
+    super(props);
+    this.state = {
         username: "",
         email: "",
         password: "",
         errors: ""
     }
+  }
+
     componentWillMount(){
       return this.props.loggedInStatus ? this.redirect() : null
   }
@@ -20,31 +25,35 @@ class Login extends Component {
         })
     }
 
-    handleSubmit = (event)=>{
-        event.preventDefault()
-        const {username, email, password} = this.state
-        let user = {
-            username: username,
-            email: email,
-            password: password
-          }
-          
+    handleSubmit = (event) => {
+      event.preventDefault()
+      const {username, email, password} = this.state
+      let user = {
+          username: username,
+          email: email,
+          password: password
+      }
+
       axios.post('http://localhost:3001/login', {user}, {withCredentials: true})
-          .then(response => {
-            if (response.data.logged_in) {
+      .then(
+        
+        response =>{
+          if(response.data.logged_in){
               this.props.handleLogin(response.data)
               this.redirect()
-            } else {
+          }else{
               this.setState({
-                errors: response.data.errors
+                  errors: response.data.errors
               })
-            }
-          })
-          .catch(error => console.log('api errors:', error))
-        };
-      redirect = () => {
-          this.props.history.push('/photographers')
-        }
+          }
+      })
+      .catch(console.log('api errors:', this.errors))
+  }
+
+
+    redirect = () => {
+        this.props.history.push('/photographers')
+      }
     
 
 
@@ -52,7 +61,7 @@ class Login extends Component {
     render(){
         return(
             <div>
-              <Route exact path = '/login'>
+              
                 <h2>Login here:</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input
@@ -89,7 +98,7 @@ class Login extends Component {
                     >Log in</button>
                     
                 </form>
-                </Route>
+                
             </div>
         )
     }

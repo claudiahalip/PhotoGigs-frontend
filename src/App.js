@@ -5,17 +5,18 @@ import ReviewsContainer from  './containers/ReviewsContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import { Component } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import Signup from './components/Signup';
 import Login from'./components/Login';
 import Logout from './components/Logout';
+import {Route} from 'react-router-dom'
 
 
  class App extends Component {
    
   constructor(props) {
     super(props); 
-    this.state = { isLoggedIn: false,
+    this.state = {isLoggedIn: false,
     user: {}
     };
   }
@@ -42,9 +43,9 @@ import Logout from './components/Logout';
   }
 
   loginStatus = () => {
-    Axios.get("http://localhost:3001/users", {withCredentials: true})
+    axios.get("http://localhost:3001/logged_in", {withCredentials: true})
     .then(response=> {
-      if(response.isLoggedIn){
+      if(response.logged_in){
          this.handleLogin(response)
       } else{
         this.handleLogout()
@@ -67,8 +68,19 @@ import Logout from './components/Logout';
         
         
         <Login handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        
+        
+        
         <Signup handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        <Logout handleLogout = {this.handleLogout} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        
+
+        {/* <Logout handleLogout = {this.handleLogout} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/> */}
+        <Route exact path='/' render={props => (
+              <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
+              )}
+            />
+
+
         <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
         <br/>
         

@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'; 
 import axios from 'axios'
 
 class Signup extends Component {
-
-    state={
+  constructor(props){
+    super(props);
+    this.state={
         username:"",
         email:"",
         password: "",
         password_confirmation: "",
         errors:""
+      }
     }
 
     handleChange = (event)=>{
@@ -40,22 +41,35 @@ class Signup extends Component {
     })
     .catch(error => console.log('api errors:', error))
   };
-    redirect = () => {
-        this.props.history.push('/photographers')
-  }
+
+  redirect = () => {
+      this.props.history.push('/')
+  };
+
+
+handleErrors = ()=>{
+  return(
+      <div>
+  <ul>{this.state.errors.map((error) => {
+    return <li key={error}>{error}</li>
+  })}
+  </ul> 
+</div>
+    )
+};
 
 
     render() {
         return(
             <div>
-              <Route exact path = '/signup'>
+              
                 <h2>Signup</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input
                     placeholder="username"
                     type="text"
                     name="username"
-                    value={this.state.username}
+                    value={this.username}
                     onChange={this.handleChange}>
                     </input>
                     <br></br>
@@ -65,7 +79,7 @@ class Signup extends Component {
                     placeholder="email"
                     type="text"
                     name="email"
-                    value={this.state.email}
+                    value={this.email}
                     onChange={this.handleChange}
                     ></input>
                     <br></br>
@@ -74,7 +88,7 @@ class Signup extends Component {
                     placeholder="password"
                     type="password"
                     name="password"
-                    value={this.state.password}
+                    value={this.password}
                     onChange={this.handleChange}
                     ></input>
                     <br></br>
@@ -82,9 +96,9 @@ class Signup extends Component {
 
                     <input
                     placeholder="password confirmation"
-                    type="password"
+                    type="text"
                     name="password_confirmation"
-                    value={this.state.password_confirmation}
+                    value={this.password_confirmation}
                     onChange={this.handleChange}
                     ></input>
                     <br></br>
@@ -94,7 +108,7 @@ class Signup extends Component {
                     type="submit"
                     >Sign up</button>
                 </form>
-                </Route>
+              
 
             </div>
         )
