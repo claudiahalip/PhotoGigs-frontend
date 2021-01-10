@@ -9,6 +9,7 @@ class Logout extends Component {
         .then(response =>
             {this.props.handleLogout()}
         ).catch(error => {console.log("logout error", error)})
+        this.props.history.push('/photographers')
     }
 
 
@@ -16,7 +17,7 @@ class Logout extends Component {
         return(
             <div>
                 <Route exact path = "/">
-                <button onClick = {this.handleLogoutClick}>Logout</button>
+                {!this.props.loggedInStatus &&  <button onClick = {this.handleLogoutClick}>Logout</button>}
                 </Route>
             </div>
         )

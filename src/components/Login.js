@@ -52,8 +52,8 @@ class Login extends Component {
 
 
     redirect = () => {
-        this.props.history.push('/photographers')
-      }
+      this.props.history.push('/photographers')
+    }
     
 
 

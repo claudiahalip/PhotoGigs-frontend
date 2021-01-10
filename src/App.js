@@ -57,8 +57,13 @@ import {Route} from 'react-router-dom'
   render(){
     return (
       <div className="App">
-       
+      
         <NavBar/>
+        <Route exact path='/' render={props => (
+          <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
+          )}
+        />
+        
         <br/>
         <h1 className="title" >PHOTOGIGS</h1>
         <br/>
@@ -66,19 +71,18 @@ import {Route} from 'react-router-dom'
         <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         
+        <Route exact path = '/login' render = { props => (
+          <Login {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        )}
+        />
         
-        <Login handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        
-        
-        
-        <Signup handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        
+        <Route exact path = '/signup' render = {props => (
+        <Signup  {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        )}
+        />
 
-        {/* <Logout handleLogout = {this.handleLogout} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/> */}
-        <Route exact path='/' render={props => (
-              <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
-              )}
-            />
+         
+        
 
 
         <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
