@@ -229,14 +229,13 @@ h1 {
   text-shadow: 2px 2px 7px ;
 }
 .home-container{
-  display: center;
-  position: relative;
-  text-align: center;
-  width: auto;
-  height: 20rem;
-  margin: 1rem 2rem;
-  padding: 3rem;
-  text-align: center;
+  
+  right: 0;
+  text-align:right;
+  width:500;
+  height: 25rem;
+  margin: 5rem 5rem;
+  padding: 2rem;
   color: rgba(63, 62, 62, 0.658);
   background-color: #ec902891;
   
@@ -263,3 +262,11 @@ input[type ="radio"] {
 .react-calendar__navigation button {
   font-size: 1em;
 } */
+
+.logout{
+  text-align: right;
+}
+
+.siteName{
+  text-align: right;
+}

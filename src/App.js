@@ -12,6 +12,7 @@ import Logout from './components/Logout';
 import {Route} from 'react-router-dom'
 
 
+
  class App extends Component {
    
   constructor(props) {
@@ -56,17 +57,15 @@ import {Route} from 'react-router-dom'
 
   render(){
     return (
-      <div className="App">
-      
+      <div className="App" >
         <NavBar/>
+        
         <Route exact path='/' render={props => (
           <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
           )}
         />
-        
-        <br/>
         <h1 className="title" >PHOTOGIGS</h1>
-        <br/>
+        
         <Home/>
         <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
@@ -80,13 +79,9 @@ import {Route} from 'react-router-dom'
         <Signup  {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         )}
         />
-
-         
-        
-
-
-        <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
+      <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
         <br/>
+        
         
       </div>
   )};

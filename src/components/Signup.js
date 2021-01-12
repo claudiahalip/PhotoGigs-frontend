@@ -20,7 +20,7 @@ class Signup extends Component {
     }
 
     handleSubmit = (event)=>{
-        event.preventDefault()
+        event.preventDefault();
         const {username, email, password, password_confirmation} = this.state
     let user = {
       username: username,
@@ -43,7 +43,7 @@ class Signup extends Component {
   };
 
   redirect = () => {
-      this.props.history.push('/')
+      this.props.history.push('/photographers')
   };
 
 

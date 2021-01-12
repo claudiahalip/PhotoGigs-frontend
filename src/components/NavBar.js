@@ -7,6 +7,7 @@ function NavBar (){
     return(
         <div>
             <div className="navbar">
+            
             <Link to="/">
                 <p className="navBarLinks">Home</p>
             </Link>
