@@ -14,7 +14,7 @@ class Photographers extends Component {
   }
 
   handleChange =(event)=>{
-    const filteredPhotographers = this.props.photographers.filter(photographer => photographer.name.toLowerCase().includes(event.target.value.toLowerCase()))
+    const filteredPhotographers = this.props.photographers.filter(photographer => photographer.state.toLowerCase().includes(event.target.value.toLowerCase()))
     this.setState({
       searchTerm: event.target.value,
       currentDisplay : filteredPhotographers
@@ -39,7 +39,7 @@ class Photographers extends Component {
       return (
         <div >
           <Route exact path = '/photographers'>
-          <label>Search:</label>
+          <label>Search by state:</label>
           <input type="text" onChange={this.handleChange}/>
           <br></br>
           </Route>

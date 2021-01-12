@@ -63,7 +63,7 @@ class PhotographerAllInfo extends Component{
         return(
           <div>
             {this.renderPhotographer()}
-            <h3>See avalable dates</h3>
+            <h3>See available dates</h3>
             <PhotographerAvalableDates/>
        
             <h3>Reviews:</h3>
