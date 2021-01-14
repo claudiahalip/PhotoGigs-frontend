@@ -49,7 +49,7 @@ class PhotographerAllInfo extends Component{
             const reviews = this.props.reviews.filter(review => review.photographer_id == photographer.id)
             return <div>{reviews.map(review => {
                 return <div>
-                       <li key= {review.id} >{review.content} posted at: {this.transformDate(review.created_at)}</li>
+                       <li key={review.id} >{review.content} posted at: {this.transformDate(review.created_at)}</li>
                        <br/>
                        <br/>
                       </div>})
@@ -63,8 +63,8 @@ class PhotographerAllInfo extends Component{
         return(
           <div>
             {this.renderPhotographer()}
-            <h3>See available dates</h3>
-            <PhotographerAvalableDates/>
+            {/* <h3>See available dates</h3>
+            <PhotographerAvalableDates/> */}
        
             <h3>Reviews:</h3>
             {this.renderReviews()}

@@ -1,9 +1,11 @@
 import React from 'react'
+import  { Component } from 'react';
 import {
     Link
   } from "react-router-dom";
 
-function NavBar (){
+class NavBar extends Component {
+    render(){
     return(
         <div>
             <div className="navbar">
@@ -21,20 +23,21 @@ function NavBar (){
             </Link>
             
             <Link to="/photographers/new">
-                <p className="navBarLinks">Add your listing</p>
+                {this.props.loggedInStatus && <p className="navBarLinks">Add your listing</p>}
             </Link>
 
             <Link to="/login" >
-                <p className="navBarLinks">Login</p>
+                 {!this.props.loggedInStatus && <p className="navBarLinks">Login</p>}
             </Link>
 
             <Link to="/signup" >
-                <p className="navBarLinks">Sign up</p>
+                 {!this.props.loggedInStatus && <p className="navBarLinks">Sign up</p>}
             </Link>
            
             </div>
         </div>
     )
+    }
 }
 
 export default NavBar

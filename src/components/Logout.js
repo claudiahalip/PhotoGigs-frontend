@@ -18,7 +18,7 @@ class Logout extends Component {
             <div>
                 <Route exact path = "/">
                   <div className="logout">
-                    <button  onClick = {this.handleLogoutClick}>Logout</button>
+                    {this.props.loggedInStatus && <button  onClick = {this.handleLogoutClick}>Logout</button>}
                   </div>
                 </Route>
             </div>

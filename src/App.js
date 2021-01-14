@@ -9,7 +9,7 @@ import axios from 'axios';
 import Signup from './components/Signup';
 import Login from'./components/Login';
 import Logout from './components/Logout';
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 
 
 
@@ -23,17 +23,18 @@ import {Route} from 'react-router-dom'
   }
 
   componentDidMount() {
-    this.loginStatus()
+    this.loginStatus();
   }
 
   handleLogin = (data)=>{
+      //console.log(data)
       this.setState({
         isLoggedIn: true,
         user: data.user
-      }
-      )
+      })
+      //console.log(this.state.user.username)
+      //console.log(this.state.isLoggedIn)
   }
-
   
 
   handleLogout = () => {
@@ -42,12 +43,13 @@ import {Route} from 'react-router-dom'
       user: {}
     })
   }
-
+ 
   loginStatus = () => {
     axios.get("http://localhost:3001/logged_in", {withCredentials: true})
     .then(response=> {
-      if(response.logged_in){
-         this.handleLogin(response)
+      //console.log(response.data.user)
+      if(response.data.logged_in){
+        this.handleLogin(response.data)
       } else{
         this.handleLogout()
       }
@@ -55,10 +57,13 @@ import {Route} from 'react-router-dom'
        error => console.log ('api error:', error)
     )}
 
+  
+
   render(){
     return (
       <div className="App" >
-        <NavBar/>
+        <NavBar loggedInStatus = {this.state.isLoggedIn}/>
+        <div>{this.state.isLoggedIn && `You are logged in as ${this.state.user.username}`}</div>
         
         <Route exact path='/' render={props => (
           <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
@@ -74,9 +79,8 @@ import {Route} from 'react-router-dom'
           <Login {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         )}
         />
-        
         <Route exact path = '/signup' render = {props => (
-        <Signup  {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+          <Signup  {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         )}
         />
       <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
