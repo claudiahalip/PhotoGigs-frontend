@@ -10,7 +10,7 @@ export const fetchPhotographers = ()=>{
     console.log("c")//second
     return (dispatch) => {
         dispatch({type: "FETCHING_PHOTOGRAPHERS"})
-    fetch("http://localhost:3001/photographers")
+    fetch("https://mysterious-retreat-20431.herokuapp.com/photographers")
     .then(resp => resp.json())
     .then((resp)=>{
         //debugger
@@ -30,7 +30,7 @@ export const createPhotographer = (photographer) => {
             }, 
             body: JSON.stringify(photographer)
             };
-            fetch("http://localhost:3001/photographers", configObj)
+            fetch("https://mysterious-retreat-20431.herokuapp.com/photographers", configObj)
             .then(resp => resp.json())
             .then((newPhotographer) => {
                 //debugger
@@ -51,7 +51,7 @@ export const  addReview =(review)=>{
 export const fetchingReviews = () =>{
     return dispatch => {
       dispatch({type: 'FETCHING_REVIEWS'})
-      fetch("http://localhost:3001/reviews")
+      fetch("https://mysterious-retreat-20431.herokuapp.com/reviews")
       .then(resp => resp.json())
       .then(resp => {
         dispatch(gotReviews(resp))
@@ -70,7 +70,7 @@ export const createReview = (review) =>{
             },
             body: JSON.stringify(review)};
 
-        fetch("http://localhost:3001/reviews", configObj)
+        fetch("https://mysterious-retreat-20431.herokuapp.com/reviews", configObj)
         .then(resp => resp.json())
         .then(newReview =>{
             dispatch(addReview(newReview))

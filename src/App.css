@@ -246,10 +246,10 @@ input[type ="radio"] {
   display: none;
 }
 
-.react-calendar {
+/* .react-calendar {
  
   
-}
+} */
 
 /* .react-calendar__viewContainer{
   background: #ec902891;
@@ -270,3 +270,6 @@ input[type ="radio"] {
 .siteName{
   text-align: right;
 }
+
+/* form style */
+

@@ -63,7 +63,7 @@ handleErrors = ()=>{
         return(
             <div>
               
-                <h2>Signup</h2>
+                <h2>Sign up here:</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input
                     placeholder="username"
@@ -108,6 +108,9 @@ handleErrors = ()=>{
                     type="submit"
                     >Sign up</button>
                 </form>
+
+
+                
               
 
             </div>

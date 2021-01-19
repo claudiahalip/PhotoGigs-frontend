@@ -5,7 +5,7 @@ import {Route} from 'react-router-dom'
 class Logout extends Component {
 
     handleLogoutClick = () => {
-       axios.delete("http://localhost:3001/logout",{ withCredentials: true})
+       axios.delete("https://mysterious-retreat-20431.herokuapp.com/logout",{ withCredentials: true})
         .then(response =>
             {this.props.handleLogout()}
         ).catch(error => {console.log("logout error", error)})

@@ -45,7 +45,7 @@ import {Route, Switch} from 'react-router-dom'
   }
  
   loginStatus = () => {
-    axios.get("http://localhost:3001/logged_in", {withCredentials: true})
+    axios.get("https://mysterious-retreat-20431.herokuapp.com/logged_in", {withCredentials: true})
     .then(response=> {
       //console.log(response.data.user)
       if(response.data.logged_in){
