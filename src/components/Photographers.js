@@ -15,9 +15,10 @@ class Photographers extends Component {
 
   handleChange =(event)=>{
     const filteredPhotographers = this.props.photographers.filter(photographer => photographer.state.toLowerCase().includes(event.target.value.toLowerCase()))
+    console.log(filteredPhotographers)
     this.setState({
       searchTerm: event.target.value,
-      currentDisplay : filteredPhotographers
+      currentDisplay : filteredPhotographers.reverse()
     })
   }
 
