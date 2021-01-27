@@ -18,7 +18,7 @@ class Photographers extends Component {
     console.log(filteredPhotographers)
     this.setState({
       searchTerm: event.target.value,
-      currentDisplay : filteredPhotographers.reverse()
+      currentDisplay : filteredPhotographers
     })
   }
 
