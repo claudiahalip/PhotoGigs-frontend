@@ -7,8 +7,9 @@ import {
 
 function Home(){
   return(
+    
     <div style = {{backgroundImage: 'url(https://images.unsplash.com/photo-1457608135803-4827addc43e0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fGNhbWVyYXxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60)', 
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat', marginLeft: '20px'
      }}>
     <Route exact path = "/">
     <h2>Welcome! </h2>
