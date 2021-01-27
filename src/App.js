@@ -9,7 +9,7 @@ import axios from 'axios';
 import Signup from './components/Signup';
 import Login from'./components/Login';
 import Logout from './components/Logout';
-import {Route, Switch} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 
 
 
@@ -32,8 +32,7 @@ import {Route, Switch} from 'react-router-dom'
         isLoggedIn: true,
         user: data.user
       })
-      //console.log(this.state.user.username)
-      //console.log(this.state.isLoggedIn)
+      
   }
   
 

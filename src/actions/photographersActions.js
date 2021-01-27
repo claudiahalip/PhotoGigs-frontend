@@ -81,43 +81,43 @@ export const createReview = (review) =>{
 
 //user actions:
 
-export const gotUsers = (users) =>{
-    return {type: "GOT_USERS", payload: users}
-}
+// export const gotUsers = (users) =>{
+//     return {type: "GOT_USERS", payload: users}
+// }
 
-export const addUser = (user)=>{
-    return {type: "ADD_USER", payload: user}
-}
+// export const addUser = (user)=>{
+//     return {type: "ADD_USER", payload: user}
+// }
 
-export const createUser = (user) => {
-    return dispatch => {
-        const configObj ={
-            method: "POST",
-            headers:{
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            },
-            body: JSON.stringify(user)};
+// export const createUser = (user) => {
+//     return dispatch => {
+//         const configObj ={
+//             method: "POST",
+//             headers:{
+//             "Content-Type": "application/json",
+//             Accept: "application/json",
+//             },
+//             body: JSON.stringify(user)};
 
-        fetch("http://localhost:3001/users", configObj)
-        .then(resp => resp.json())
-        .then(newUser =>{
-            dispatch(addUser(newUser))
-        })
-    }
+//         fetch("http://localhost:3001/users", configObj)
+//         .then(resp => resp.json())
+//         .then(newUser =>{
+//             dispatch(addUser(newUser))
+//         })
+//     }
 
-}
+// }
 
-export const fetchingUser = (user) => {
-    return dispatch => {
-        dispatch({type: 'FETCHING_USER'})
-        fetch("http://localhost:3001/user")
-        .then(resp => resp.json())
-        .then(resp => {
-          dispatch(gotUsers(resp))
-      })
-    }
+// export const fetchingUser = (user) => {
+//     return dispatch => {
+//         dispatch({type: 'FETCHING_USER'})
+//         fetch("http://localhost:3001/user")
+//         .then(resp => resp.json())
+//         .then(resp => {
+//           dispatch(gotUsers(resp))
+//       })
+//     }
 
-}
+// }
 
 
