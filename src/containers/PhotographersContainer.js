@@ -36,7 +36,7 @@ class PhotographersContainer extends Component {
 }
 const mapStateToProps = (state) => {
     //debugger
-    //console.log(state)
+    console.log(state)
     return state
 }
 
