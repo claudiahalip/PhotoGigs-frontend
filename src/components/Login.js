@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {
+  Link
+} from "react-router-dom";
 
 
 
@@ -62,7 +65,7 @@ class Login extends Component {
         return(
             <div>
               
-                <h2>Login here:</h2>
+                <h2>Login:</h2>
                 <form onSubmit={this.handleSubmit}>
                 
   
@@ -100,6 +103,13 @@ class Login extends Component {
                     >Log in</button>
                     
                 </form>
+
+                <p className="text_buttons">
+              No account yet?
+              <Link to="/signup" >
+                <p className="fake_button">Sign up</p>
+              </Link>
+            </p>
                 
             </div>
         )

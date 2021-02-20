@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {
+  Link
+} from "react-router-dom";
 
 class Signup extends Component {
   constructor(props){
@@ -63,7 +66,7 @@ handleErrors = ()=>{
         return(
             <div>
               
-                <h2>Sign up here:</h2>
+                <h2>Create an account:</h2>
                 <form onSubmit={this.handleSubmit}>
                     <input
                     placeholder="username"
@@ -109,7 +112,13 @@ handleErrors = ()=>{
                     >Sign up</button>
                 </form>
 
-
+            <p className="">
+              Already an account?
+              <Link to="/login" >
+                <p className="fake_button">Login</p>
+              </Link>
+            </p>
+            
                 
               
 

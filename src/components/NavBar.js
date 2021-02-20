@@ -21,15 +21,7 @@ class NavBar extends Component {
             <Link to="/reviews" >
                 <p className="navBarLinks">All reviews</p>
             </Link>
-            {
-                this.props.loggedInStatus ? 
-            <Link to="/photographers/new">
-                {this.props.loggedInStatus && <p className="navBarLinks">Add your listing</p>}
-            </Link> :
-            <Link to="/signup" >
-            <p className="navBarLinks">Sign up</p>
-            </Link>
-            }
+        
             <Link to="/login" >
                  {!this.props.loggedInStatus && <p className="navBarLinks">Login</p>}
             </Link>
