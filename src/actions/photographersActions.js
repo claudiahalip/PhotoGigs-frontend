@@ -1,3 +1,5 @@
+const u
+
 export const gotPhotographers = (photographers) => {
     return { type: "GOT_PHOTOGRAPHERS", payload: photographers}
 };
