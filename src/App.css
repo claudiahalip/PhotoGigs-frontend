@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.loggedIn{
+  border: 1px #ec9128;
+}
+
 
 
 /* .App-header {
@@ -275,6 +279,7 @@ input[type ="radio"] {
 .searchInput{
   float: right;
   padding-right: 100px;
+  padding-bottom: 10px;
 }
 
 .searchInput > input{

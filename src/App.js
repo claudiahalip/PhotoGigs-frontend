@@ -62,7 +62,7 @@ import {Route} from 'react-router-dom'
     return (
       <div className="App" >
         <NavBar loggedInStatus = {this.state.isLoggedIn}/>
-        <div>{this.state.isLoggedIn && `You are logged in as ${this.state.user.username}`}</div>
+        <div className="loggedIn" >{this.state.isLoggedIn && `You are logged in as ${this.state.user.username}`}</div>
         
         <Route exact path='/' render={props => (
           <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
