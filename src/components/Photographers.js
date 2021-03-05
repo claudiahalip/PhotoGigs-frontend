@@ -40,9 +40,11 @@ class Photographers extends Component {
       return (
         <div >
           <Route exact path = '/photographers'>
+          <div className="searchInput">
           <label>Search by state:</label>
           <input type="text" onChange={this.handleChange}/>
           <br></br>
+          </div>
           </Route>
           {this.renderPhotographers()}
           <Route exact path="/photographers/:id" component={({match})=>{

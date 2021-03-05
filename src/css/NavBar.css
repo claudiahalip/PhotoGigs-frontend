@@ -1,0 +1,32 @@
+.navbar{
+    position: sticky;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.432);
+  }
+  
+  .navBarLinks {
+    float: left;
+    border-right: 1px solid  #ec9128;
+  }
+  
+  .navBarLinks hover {
+    background-color: rgba(53, 51, 51, 0.74);
+  }
+  
+  .active {
+    background-color: #ec9128;
+  }
+  
+  .navBarLinks {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }

@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import PhotographerAvalableDates from './PhotographerAvalableDates'
 import {Link} from 'react-router-dom'
-import PhotoGallery from './components/PhotoGallery'
+
 
 
 class PhotographerAllInfo extends Component{
@@ -68,7 +68,6 @@ class PhotographerAllInfo extends Component{
             {/* <h3>See available dates</h3>
             <PhotographerAvalableDates/> */}
 
-            <PhotoGallery/>
        
             <h3>Reviews:</h3>
             {this.renderReviews()}
