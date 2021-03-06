@@ -10,10 +10,13 @@ class Review extends Component {
 
   render(){
     return(
-      <div className="review"> 
-        <p>{this.props.review.content}</p>
-        <h4>posted at: {this.transformDate(this.props.review.created_at)}</h4>
-        <h4>for: {this.props.review.photographer.name} </h4>
+      <div>
+        <h2>Reviews</h2>
+        <div className="review"> 
+          <p>{this.props.review.content}</p>
+          <h4>posted at: {this.transformDate(this.props.review.created_at)}</h4>
+          <h4>for: {this.props.review.photographer.name} </h4>
+        </div>
       </div>
     )
   }
