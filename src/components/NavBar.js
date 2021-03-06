@@ -21,7 +21,7 @@ class NavBar extends Component {
             </Link>
 
             <Link to= "/photographers/new" >
-                 {!this.props.loggedInStatus && <p className="navBarLinks">Add your listing</p>}
+                 {this.props.loggedInStatus && <p className="navBarLinks">Add your listing</p>}
             </Link>
 
             <Link to="/reviews" >
