@@ -3,7 +3,10 @@
 }
 
 .loggedIn{
+  float: right;
+  padding: 5px;
   border: 1px #ec9128;
+  border-radius: 9px;
 }
 
 
