@@ -13,6 +13,7 @@ class Reviews extends Component{
     render(){
       return(
         <div>
+          <h2>Reviews</h2>
           <Route exact path = "/reviews">
             {this.renderReviews()}
           </Route>

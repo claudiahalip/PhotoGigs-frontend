@@ -11,7 +11,6 @@ class Review extends Component {
   render(){
     return(
       <div>
-        <h2>Reviews</h2>
         <div className="review"> 
           <p>{this.props.review.content}</p>
           <h4>posted at: {this.transformDate(this.props.review.created_at)}</h4>
