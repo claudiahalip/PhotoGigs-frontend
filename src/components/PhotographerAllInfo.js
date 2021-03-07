@@ -34,7 +34,7 @@ class PhotographerAllInfo extends Component{
         if (photographer){
             return <div>
             <h3>{photographer.name}</h3>
-            <h4>{photographer.website}</h4>
+            <a target='_blank' href={this.props.photographer.website}>{this.props.photographer.website}</a>
             <h4>YOE:{photographer.years_of_experience}</h4>
             <h4>{photographer.city}, {photographer.state}</h4>
             </div>
