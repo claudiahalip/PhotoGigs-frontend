@@ -3,6 +3,7 @@ import axios from 'axios'
 import {
   Link
 } from "react-router-dom";
+import '../css/SignUp.css';
 
 
 
@@ -63,46 +64,49 @@ class Login extends Component {
 
     render(){
         return(
-            <div>
+            <div className="Form">
               
-                <h2>Login:</h2>
+                <p>Login:</p>
+                <div className="form">
                 <form onSubmit={this.handleSubmit}>
                 
   
                     <input
+                    className="select"
                     placeholder= "username"
                     type="text"
                     name="username"
                     value={this.state.username}
                     onChange={this.handleChange}></input>
-                    <br></br>
-                    <br></br>
+                  
                     <input
+                    className="select"
                     placeholder="email"
                     type="text"
                     name="email"
                     value={this.state.email}
                     onChange={this.handleChange}
                     ></input>
-                    <br></br>
-                    <br></br>
+                    
 
                     <input
+                    className="select"
                     placeholder="password"
                     type="password"
                     name="password"
                     value={this.state.password}
                     onChange={this.handleChange}
                     ></input>
-                    <br></br>
-                    <br></br>
+                    
 
                     <button
+                    className="submit"
                     placeholder="submit"
                     type="submit"
-                    >Log in</button>
+                    >Login</button>
                     
                 </form>
+                </div>
 
                 <p className="text_buttons">
               No account yet?

@@ -3,6 +3,7 @@ import axios from 'axios'
 import {
   Link
 } from "react-router-dom";
+import '../css/SignUp.css';
 
 class Signup extends Component {
   constructor(props){
@@ -64,53 +65,54 @@ handleErrors = ()=>{
 
     render() {
         return(
-            <div>
+            <div className="Form">
               
-                <h2>Create an account:</h2>
+                <p>Create an account:</p>
+                <div className="form">
                 <form onSubmit={this.handleSubmit}>
                     <input
+                    className="select"
                     placeholder="username"
                     type="text"
                     name="username"
                     value={this.username}
                     onChange={this.handleChange}>
                     </input>
-                    <br></br>
-                    <br></br>
-
+                    
                     <input
+                    className="select"
                     placeholder="email"
                     type="text"
                     name="email"
                     value={this.email}
                     onChange={this.handleChange}
                     ></input>
-                    <br></br>
-                    <br></br>
+                    
                     <input
+                    className="select"
                     placeholder="password"
                     type="password"
                     name="password"
                     value={this.password}
                     onChange={this.handleChange}
                     ></input>
-                    <br></br>
-                    <br></br>
 
                     <input
+                    className="select"
                     placeholder="password confirmation"
                     type="text"
                     name="password_confirmation"
                     value={this.password_confirmation}
                     onChange={this.handleChange}
                     ></input>
-                    <br></br>
-                    <br></br>
+                    
                     <button
+                    className="submit"
                     placeholder="submit"
                     type="submit"
                     >Sign up</button>
                 </form>
+                </div>
 
             <p className="">
               Already an account?

@@ -9,8 +9,9 @@ import axios from 'axios';
 import Signup from './components/Signup';
 import Login from'./components/Login';
 import Logout from './components/Logout';
-import {Route} from 'react-router-dom'
-
+import {Switch, Route} from 'react-router-dom';
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 
  class App extends Component {
@@ -61,18 +62,26 @@ import {Route} from 'react-router-dom'
   render(){
     return (
       <div className="App" >
-        <NavBar loggedInStatus = {this.state.isLoggedIn}/>
+        <Header loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+
         <div className="loggedIn" >{this.state.isLoggedIn && `You are logged in as ${this.state.user.username}`}</div>
-        
-        <Route exactpath = '/' render = {props => (
+
+        <Route exact path = '/' render = {props => (
         <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
         )}/> 
-        <h1 className="title" >PHOTOGIGS</h1>
         
-        <Home/>
+        {/* <h1 className="title" >PHOTOGIGS</h1> */}
+        
+        
         <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+   
         <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         
+
+        <Route exct path = '/' render = { props => (
+          <Home {...props}  loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        )}
+        />
         <Route exact path = '/login' render = { props => (
           <Login {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         )}
@@ -81,8 +90,10 @@ import {Route} from 'react-router-dom'
           <Signup  {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         )}
         />
-      <h4>2020 	&#169;Claudia Cristina Vamesu</h4>
-        <br/>
+
+      
+      <Footer/>
+        
         
         
       </div>

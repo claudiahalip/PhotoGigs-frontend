@@ -1,22 +1,14 @@
 .navbar{
-    position: sticky;
-    align-items: center;
-    height: 44px;
     display: flex;
-    top: 0;
+    align-items: center;
+    position: sticky;
     position: -webkit-sticky;
-    overflow: hidden;
-    text-align: center;
-    /* list-style-type: none; */
+    top: 0;
     z-index: 100;
     width: 100%;
-    background-color: rgba(51, 51, 51, 0.432);
-  }
+    height: 44px;
+}
   
-  .navBarLinks {
-    float: center;
-    /* border-right: 1px solid  #ec9128; */
-  }
   
   .navBarLinks:hover {
     color: #ec9128;
@@ -27,9 +19,11 @@
   }
   
   .navBarLinks {
+    float: center;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }

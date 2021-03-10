@@ -1,0 +1,20 @@
+
+.homePage {
+    background-image: url(../img/PhotoHomePage.png);
+    
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+.home-container{
+    text-align:right;
+    background-color: rgba(255, 255, 255, 0.276);
+    height: 25rem;
+    margin: 5rem 0rem 5rem 60rem;
+    padding: 2rem;
+    color: white;
+    
+    
+  }
+  

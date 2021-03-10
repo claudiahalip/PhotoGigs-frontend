@@ -26,7 +26,7 @@ class PhotographersContainer extends Component {
           <Route exact path ="/photographers/new">
               <PhotographerForm createPhotographer = {this.props.createPhotographer}/>
             </Route>
-            <Route path="/">
+            <Route exact path="/" >
               <Photographers photographers= {this.props.photographers} reviews ={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews} />
             </Route >
           </Switch> 

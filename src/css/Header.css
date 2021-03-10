@@ -1,0 +1,30 @@
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    align-self: flex-start;
+    height: 50px;
+}
+
+.headerLeft{
+   display: flex;
+   margin-left: 30px;
+}
+.headerLeft > h2{
+    margin-top: 20px;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.img-logo{
+   height: 50px;
+}
+
