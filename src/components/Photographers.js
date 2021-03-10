@@ -47,6 +47,7 @@ class Photographers extends Component {
           </div>
           </Route>
           {this.renderPhotographers()}
+          
           <Route exact path="/photographers/:id" component={({match})=>{
               return <PhotographerAllInfo id = {match.params.id} photographers={this.props.photographers} reviews={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews}/>
             }}>

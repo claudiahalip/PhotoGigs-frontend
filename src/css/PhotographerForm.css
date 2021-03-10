@@ -1,0 +1,53 @@
+.photographerForm{
+    text-align: center ;
+    margin-bottom: 100px;
+  }
+  p {
+    font-size: 18px;
+    font-family: monospace;
+    color:  #ec9128;
+  }
+  
+  label{
+      font-size: 14px;
+      font-family: monospace;
+      color:  #f0d1ae;
+  }
+  .photo-form{
+      margin: auto;
+      height: 400px;
+      width: 300px;
+      border-radius: 5px;
+      background-color:#f0d1ae;
+      padding: 30px;
+  }
+  
+  
+  .select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .submit {
+    width: 100%;
+    background-color:#ec9128;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    font-family: monospace;
+
+  }
+  
+  .submit:hover {
+    background-color: #884c07;
+    outline:none;
+  }
+  

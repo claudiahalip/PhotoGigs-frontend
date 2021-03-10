@@ -1,12 +1,12 @@
 
 import React, { Component } from 'react'
 import PhotographerAvalableDates from './PhotographerAvalableDates'
-import {Link} from 'react-router-dom'
+import {Link, Route} from 'react-router-dom'
 
 
 
 class PhotographerAllInfo extends Component{
-    state ={
+    state = {
         content:''
     }
 
@@ -64,11 +64,14 @@ class PhotographerAllInfo extends Component{
     render(){
         return(
           <div>
+              <h2>TEST</h2>
+             <Route exact path = "/photographers">
+                 <h2>Test</h2>
             {this.renderPhotographer()}
             {/* <h3>See available dates</h3>
             <PhotographerAvalableDates/> */}
 
-       
+            
             <h3>Reviews:</h3>
             {this.renderReviews()}
             <hr/>
@@ -78,6 +81,8 @@ class PhotographerAllInfo extends Component{
             <input type="text" value={this.state.content} onChange={this.handleOnChange}/>
             <input type="submit"/>
           </form>
+
+          </Route> 
           </div>
         )
     }

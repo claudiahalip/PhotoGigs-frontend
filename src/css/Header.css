@@ -32,6 +32,10 @@
    margin: 5px;
 }
 
+.headerRight{
+    display: flex;
+    margin-left: 30px;
+ }
 .headerRight > p{
     margin-top: 20px;
     font-size: 18px;

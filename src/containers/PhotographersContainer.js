@@ -29,7 +29,7 @@ class PhotographersContainer extends Component {
             </Route>
             <Route exact path="/photographers" >
               <Photographers photographers= {this.props.photographers} reviews ={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews} />
-              <h1>TEST</h1>
+              {/* <h1>TEST</h1> */}
             </Route >
           </Switch> 
         </div>

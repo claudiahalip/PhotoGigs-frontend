@@ -1,6 +1,7 @@
 import React from 'react'
 import {Component} from 'react';
 import { withRouter } from 'react-router-dom'; 
+import '../css/PhotographerForm.css'
 
 class PhotographerForm extends Component {
     state = {
@@ -26,39 +27,47 @@ class PhotographerForm extends Component {
 
     render(){
         return(
-            <div>
-                <h2>Add your listing:</h2>
+            <div className="photographerForm">
+                <p>Add your listing:</p>
+                <div className="photo-form">
                 <form onSubmit={this.handleOnSubmit}>
-                    <label>Name </label>
-                    <input type="text" onChange = {this.handleOnChange} value={this.state.name} name="name"/>
-                    <br></br>
-                    <br></br>
-                    <label>Website </label>
-                    <input type="text" onChange = {this.handleOnChange} value={this.state.website} name="website"/>
-                    <br></br>
-                    <br></br>
-                    <label>Years of Experience </label>
-                    <input type="text" onChange = {this.handleOnChange} value={this.state.years_of_experience} name="years_of_experience"/>
-                    <br></br>
-                    <br></br>
-                    <label>City </label>
-                    <input type="text" onChange = {this.handleOnChange} value={this.state.city} name="city"/>
-                    <br></br>
-                    <br></br>
-                    <label>State </label>
-                    <input type="text" onChange = {this.handleOnChange} value={this.state.state} name="state"/>
-                    <br></br>
-                    <br></br>
-                    <label>Your photo  </label>
-                    <input type="text" onChange = {this.handleOnChange} value={this.state.image} name="image"/>
-                    <br></br>
-                    <br></br>
                     
-                    <input type="submit" />
+                    <input className="select"
+                    placeholder="Name"
+                    type="text" onChange = {this.handleOnChange} value={this.state.name} name="name"/>
+                    
+                    
+                    <input className="select"
+                    placeholder="Website"
+                    type="text" onChange = {this.handleOnChange} value={this.state.website} name="website"/>
+                    
+                    <label>Years of Experience </label>
+                    <input className="select"
+                    placeholder="Years of Experience"
+                    type="text" onChange = {this.handleOnChange} value={this.state.years_of_experience} name="years_of_experience"/>
+                    
+                    
+                    <input className="select"
+                    placeholder="City"
+                    type="text" onChange = {this.handleOnChange} value={this.state.city} name="city"/>
+                    
+                    
+                    <input className="select"
+                    placeholder="State"
+                     type="text" onChange = {this.handleOnChange} value={this.state.state} name="state"/>
+                    
+                    
+                    <input className="select"
+                    placeholder="Profile photo address"
+                    type="text" onChange = {this.handleOnChange} value={this.state.image} name="image"/>
+                   
+                    
+                    <input
+                    className="submit"
+                    type="submit" />
                 </form>
-                <br></br>
-                <br></br>
-                <br></br>
+                </div>
+                
             </div>
         )
     }
