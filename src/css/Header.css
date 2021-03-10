@@ -13,6 +13,7 @@
     height: 50px;
     border-style: outset;
     border-bottom: 1px darkgray !important;
+    border-width: 0 1px;
 }
 
 .headerLeft{
@@ -27,6 +28,12 @@
 }
 
 .img-logo{
-   height: 50px;
+   height: 44px;
+}
+
+.headerRight > p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 

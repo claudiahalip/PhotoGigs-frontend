@@ -64,38 +64,33 @@ import Footer from './components/Footer'
       <div className="App" >
         <Header loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
 
-        <div className="loggedIn" >{this.state.isLoggedIn && `You are logged in as ${this.state.user.username}`}</div>
+        {/* <div className="loggedIn" >{this.state.isLoggedIn && `You are logged in as ${this.state.user.username}`}</div> */}
 
-        <Route exact path = '/' render = {props => (
+        {/* <Route exact path = '/' render = {props => (
         <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
-        )}/> 
+        )}/>  */}
         <Route exct path = '/' render = { props => (
           <Home {...props}  loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         )}
         />
         
-        
-        <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+      <Route exact path = '/login' render = { props => (
+        <Login {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+      )}
+      />
+
+      <Route exact path = '/signup' render = {props => (
+        <Signup  {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+      )}
+      />
+
+      <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
    
-        <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        
-
-        
-        <Route exact path = '/login' render = { props => (
-          <Login {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        )}
-        />
-        <Route exact path = '/signup' render = {props => (
-          <Signup  {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        )}
-        />
-
+      <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
       
       <Footer/>
         
-        
-        
-      </div>
+    </div>
   )};
 }
 
