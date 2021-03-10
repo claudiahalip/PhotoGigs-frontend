@@ -11,6 +11,8 @@
     width: 100%;
     align-self: flex-start;
     height: 50px;
+    border-style: outset;
+    border-bottom: 1px darkgray !important;
 }
 
 .headerLeft{

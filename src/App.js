@@ -69,8 +69,10 @@ import Footer from './components/Footer'
         <Route exact path = '/' render = {props => (
         <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
         )}/> 
-        
-        {/* <h1 className="title" >PHOTOGIGS</h1> */}
+        <Route exct path = '/' render = { props => (
+          <Home {...props}  loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
+        )}
+        />
         
         
         <PhotographersContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
@@ -78,10 +80,7 @@ import Footer from './components/Footer'
         <ReviewsContainer loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         
 
-        <Route exct path = '/' render = { props => (
-          <Home {...props}  loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
-        )}
-        />
+        
         <Route exact path = '/login' render = { props => (
           <Login {...props} handleLogin = {this.handleLogin} loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
         )}
