@@ -2,7 +2,8 @@ import React from 'react';
 import cameraLogo from '../img/camera-logo.jpg';
 import {Link} from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import '../css/Header.css'
+import '../css/Header.css';
+
 
 export default function Header(props) {
     return (
@@ -21,7 +22,8 @@ export default function Header(props) {
             </div>
 
             <div className="headerRight">
-               <p className="loggedIn" >{props.loggedInStatus && `You are logged in as ${props.user.username}`}</p>
+               <p className="loggedIn" >{props.loggedInStatus && `Welcome, ${props.user.username}!`}</p>
+
             </div>
         </div>
     )

@@ -22,12 +22,14 @@ class PhotographersContainer extends Component {
     //debugger
       return (
         <div>
+          {/* <h1>TEST</h1> */}
           <Switch>
           <Route exact path ="/photographers/new">
               <PhotographerForm createPhotographer = {this.props.createPhotographer}/>
             </Route>
-            <Route exact path="/" >
+            <Route exact path="/photographers" >
               <Photographers photographers= {this.props.photographers} reviews ={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews} />
+              <h1>TEST</h1>
             </Route >
           </Switch> 
         </div>

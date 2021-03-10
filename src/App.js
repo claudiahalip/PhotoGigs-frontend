@@ -36,7 +36,6 @@ import Footer from './components/Footer'
       
   }
   
-
   handleLogout = () => {
     this.setState({
       isLoggedIn: false,

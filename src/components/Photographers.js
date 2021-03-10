@@ -39,11 +39,11 @@ class Photographers extends Component {
   render(){
       return (
         <div >
+          
           <Route exact path = '/photographers'>
           <div className="searchInput">
           <label>Search by state:</label>
           <input type="text" onChange={this.handleChange}/>
-          <br></br>
           </div>
           </Route>
           {this.renderPhotographers()}
@@ -51,8 +51,7 @@ class Photographers extends Component {
               return <PhotographerAllInfo id = {match.params.id} photographers={this.props.photographers} reviews={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews}/>
             }}>
           </Route>
-          <br></br>
-          <br></br>
+         
         </div>
       )
     }
