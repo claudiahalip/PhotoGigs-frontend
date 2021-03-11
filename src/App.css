@@ -269,9 +269,8 @@ input[type ="radio"] {
   text-align: right;
 }
 
-/* form style */
-.searchInput{
 
+.searchInput{
   padding-right: 100px;
   padding-bottom: 10px;
 }

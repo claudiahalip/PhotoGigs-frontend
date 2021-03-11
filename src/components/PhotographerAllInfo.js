@@ -68,18 +68,20 @@ class PhotographerAllInfo extends Component{
 
     render(){
         return(
-          <div>
+          <div className="reviews">
               
             {this.renderPhotographer()}
             
             <h3>Reviews:</h3>
                 {this.renderReviews()}
-            <hr/>
-            <br/>
+            
+            
             <form onSubmit={this.handleOnSubmit}>
                 <label>Add a review:</label>
                 <input type="text" value={this.state.content} onChange={this.handleOnChange}/>
-                <input type="submit"/>
+                <input 
+                className="submit"
+                type="submit"/>
             </form>
 
          
