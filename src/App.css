@@ -144,6 +144,7 @@ button:hover {
   font-size: 18px;
   font-family: monospace;
   margin: 3px;
+  color:  #ec9128;
 }
 
 
@@ -281,4 +282,7 @@ input[type ="radio"] {
     border: 1px solid lightgray;
     border-radius: 999px;
     outline: none;
+}
+.searchInput > label{
+  color: #ec9128;
 }

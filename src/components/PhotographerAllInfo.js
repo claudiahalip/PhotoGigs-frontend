@@ -64,18 +64,18 @@ class PhotographerAllInfo extends Component{
     render(){
         return(
           <div>
-             
+              <p>TEST FROM PhotographerAllInfo</p>
             {this.renderPhotographer()}
             
             <h3>Reviews:</h3>
-            {this.renderReviews()}
+                {this.renderReviews()}
             <hr/>
             <br/>
             <form onSubmit={this.handleOnSubmit}>
-            <label>Add a review:</label>
-            <input type="text" value={this.state.content} onChange={this.handleOnChange}/>
-            <input type="submit"/>
-          </form>
+                <label>Add a review:</label>
+                <input type="text" value={this.state.content} onChange={this.handleOnChange}/>
+                <input type="submit"/>
+            </form>
 
          
           </div>
