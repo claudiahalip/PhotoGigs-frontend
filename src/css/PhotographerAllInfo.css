@@ -1,0 +1,30 @@
+.profile{
+    display: flex;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+    opacity: 1;
+}
+.photo > img{
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.info{
+    margin: 10px;
+    padding: 10px;
+  
+}
+
+.info > h3 {
+    font-weight: 300;
+    margin-top: 10px;
+}
+.info > h4{
+    font-weight: 200;
+    margin-top: 5px;
+
+}
+

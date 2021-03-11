@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import PhotographerAvalableDates from './PhotographerAvalableDates'
 import {Link, Route} from 'react-router-dom'
-
+import '../css/PhotographerAllInfo.css'
 
 
 class PhotographerAllInfo extends Component{
