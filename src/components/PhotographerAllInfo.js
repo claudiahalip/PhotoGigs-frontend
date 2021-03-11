@@ -34,7 +34,7 @@ class PhotographerAllInfo extends Component{
         if (photographer){
             return <div>
             <h3>{photographer.name}</h3>
-            <a target='_blank' href={this.props.photographer.website}>{this.props.photographer.website}</a>
+            <a target='_blank' href={photographer.website}>{photographer.website}</a>
             <h4>YOE:{photographer.years_of_experience}</h4>
             <h4>{photographer.city}, {photographer.state}</h4>
             </div>
@@ -64,7 +64,7 @@ class PhotographerAllInfo extends Component{
     render(){
         return(
           <div>
-              <p>TEST FROM PhotographerAllInfo</p>
+              <p>TEST FROM PhotographerAllInfo------</p>
             {this.renderPhotographer()}
             
             <h3>Reviews:</h3>
