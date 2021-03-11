@@ -32,11 +32,16 @@ class PhotographerAllInfo extends Component{
     renderPhotographer(){
         const photographer = this.props.photographers.find(photographer => photographer.id == this.props.id)
         if (photographer){
-            return <div>
-            <h3>{photographer.name}</h3>
-            <a target='_blank' href={photographer.website}>{photographer.website}</a>
-            <h4>YOE:{photographer.years_of_experience}</h4>
-            <h4>{photographer.city}, {photographer.state}</h4>
+            return <div className="profile">
+                <div className="photo">
+                    <img src={photographer.image}></img>
+                </div>
+                <div className="info">
+                    <h3>{photographer.name}</h3>
+                    <a target='_blank' href={photographer.website}>{photographer.website}</a>
+                    <h4>YOE:{photographer.years_of_experience}</h4>
+                    <h4>{photographer.city}, {photographer.state}</h4>
+                </div>
             </div>
         }
         else{
@@ -64,7 +69,7 @@ class PhotographerAllInfo extends Component{
     render(){
         return(
           <div>
-              <p>TEST FROM PhotographerAllInfo------</p>
+              
             {this.renderPhotographer()}
             
             <h3>Reviews:</h3>
