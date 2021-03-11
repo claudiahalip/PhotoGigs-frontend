@@ -18,7 +18,7 @@ export default function Header(props) {
             </div>
 
             <div className="headerCenter">
-            <NavBar/>
+            <NavBar loggedInStatus={props.loggedInStatus}/>
             </div>
 
             <div className="headerRight">
