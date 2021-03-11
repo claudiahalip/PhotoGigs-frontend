@@ -3,8 +3,9 @@ import React, {Component} from 'react';
 import Photographer from './Photographer';
 import PhotographerAllInfo from './PhotographerAllInfo'
 import {
-  Route
+  Route, Switch
 } from "react-router-dom";
+import PhotographersContainer from '../containers/PhotographersContainer';
 
 class Photographers extends Component {
 
@@ -35,7 +36,6 @@ class Photographers extends Component {
           })
       }
   }
-
   render(){
       return (
         <div >
@@ -46,14 +46,14 @@ class Photographers extends Component {
           <input type="text" onChange={this.handleChange}/>
           </div>
           </Route>
-          {this.renderPhotographers()}
           
-          {/* <Route exact path="/photographers/:id" component={({match})=>{
+          
+          <Route exact path="/photographers/:id" component={({match})=>{
               return <PhotographerAllInfo id = {match.params.id} photographers={this.props.photographers} reviews={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews}/>
             }}>
-          </Route> */}
-          <PhotographerAllInfo  photographers={this.props.photographers} reviews={this.props.reviews} createReview={this.props.createReview} fetchingReviews={this.props.fetchingReviews}/>
-         
+          </Route>
+          
+          {this.renderPhotographers()}
         </div>
       )
     }
