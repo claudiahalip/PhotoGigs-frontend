@@ -61,9 +61,9 @@ import Footer from './components/Footer'
   render(){
     return (
       <div className="App" >
-        <Route exact path = '/' render = {props => (
-        <Logout {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
-        )}/> 
+       
+        <Logout  handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn}/>
+        
         <Header loggedInStatus = {this.state.isLoggedIn} user = {this.state.user}/>
 
         {/* <div className="loggedIn" >{this.state.isLoggedIn && `You are logged in as ${this.state.user.username}`}</div> */}
