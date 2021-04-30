@@ -11,6 +11,8 @@ class LikeButtonReactIcons extends Component {
         likesCount: newLikeClick
       })
     }
+
+    
   
     render(){
       return(
