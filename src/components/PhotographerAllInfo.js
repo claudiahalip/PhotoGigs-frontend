@@ -2,7 +2,8 @@
 import React, { Component } from 'react'
 import PhotographerAvalableDates from './PhotographerAvalableDates'
 import {Link, Route} from 'react-router-dom'
-import '../css/PhotographerAllInfo.css'
+import '../css/PhotographerAllInfo.css';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 
 
 class PhotographerAllInfo extends Component{
@@ -41,6 +42,7 @@ class PhotographerAllInfo extends Component{
                     <a target='_blank' href={photographer.website}>{photographer.website}</a>
                     <h4>YOE:{photographer.years_of_experience}</h4>
                     <h4>{photographer.city}, {photographer.state}</h4>
+                    <PhotoCameraIcon/>
                 </div>
             </div>
         }
