@@ -1,0 +1,5 @@
+
+> photogigs-frontend-next@0.1.0 dev
+> node_modules/.bin/next dev
+
+sh: 1: node_modules/.bin/next: not found
